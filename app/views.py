@@ -97,7 +97,7 @@ def local_prova(request):
         'app/lista_candidatos.html',
         context_instance = RequestContext(request,
         {
-            'title':'Cadastro de Candidatos',
+            'title':'Local Prova',
             'local_prova': Local_Prova.objects.all(),
             'year':datetime.now().year,
         })
