@@ -94,7 +94,7 @@ def local_prova(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/lista_candidatos.html',
+        'app/local_prova.html',
         context_instance = RequestContext(request,
         {
             'title':'Local Prova',
