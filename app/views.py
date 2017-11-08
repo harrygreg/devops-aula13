@@ -74,5 +74,19 @@ def lista_vestibulares(request):
             'vestibulares': Vestibular.objects.all(),
             'year':datetime.now().year,
         })
+
+
+    )
+def lista_candidatos(request):
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/lista_vestibulares.html',
+        context_instance = RequestContext(request,
+        {
+            'title':'Cadastro de Candidatos',
+            'candidatos': Candidato.objects.all(),
+            'year':datetime.now().year,
+        })
     )
 
